@@ -22,6 +22,37 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    int temp = 426;
+    int numTires = 73.5;
+    NSLog(@"temp = %d, numTires = %d", temp, numTires);
+    
+    float celcius = 37.5f;
+    NSLog(@"celcius = %.2f", celcius);
+    
+    //Create a new Empty Application Project
+    
+    
+    //Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
+    
+    
+    //Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
+    
+    
+    //Use an if, else if and else check using any of the data types of your choice.
+    
+    
+    //Perform a single for loop printing out values to the console
+    
+    
+    //Perform a nested loop printing out values to the console
+    
+    
+    //Perform a while loop that increments an int variable and outputs to the console.
+    
+    
+    
+    
     return YES;
 }
 
