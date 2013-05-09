@@ -49,14 +49,20 @@
     }
     
     //Perform a single for loop printing out values to the console
-    for (int i = 1; i <= 3; i++)
-    {
+    for (int i = 1; i <= 2; i++) {
         NSLog(@"Detination in T minus %d minutes.", i);
     }
     
     //Perform a nested loop printing out values to the console
     
-
+    for (int c = 5; c >= 1; c--) {
+        NSLog(@"I have %d pieces of bacon. Mmmm bacon *drools*", c);
+        for (int i = 3; i >= 1; i--) {
+            NSLog(@"There are %d pieces of bacon and %d minutes.", c, i);
+        }
+        //break;
+    }
+    NSLog(@"No more bacon :(");
     
     
     //Perform a while loop that increments an int variable and outputs to the console.
