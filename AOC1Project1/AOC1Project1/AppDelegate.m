@@ -21,53 +21,65 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];    
+    [self.window makeKeyAndVisible];
     
-    //Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
-    float time = 30.9999f;
-    float speed = 2.0f;
-    float timeLeft = speed * time;
+    NSLog(@"Hello, my name is Elijah Freestone and tonight we will be making bacon cheese-burgers for some co-workers.");
+    NSLog(@"Our dinner guest will be arriving soon.");
+    
+    //Cast float to int and log both to display when guests will be arriving for dinner.
+    float time = 30.5f;
+    float traffic = 2;
+    float timeLeft = traffic * time;
     int math = (int) timeLeft;
-    NSLog(@"There is currently %f minutes left.", time);
-    NSLog(@"There is now %d minutes left.", math);
+    NSLog(@"Our guests should arrive in %.1f minutes. I should call them to check if they are on schedule.", time);
+    NSLog(@"Looks like traffic is bad. They will now be arriving in %d minutes.", math);
+    NSLog(@"There is also three of them instead of two. I sure hope I have enough burgers!");
     
+    //Perform an AND, OR comparison using float, int and BOOL. This is combined with my if, else if, else statement to decide what will be for dinner tonight
+    float peopleEating = 4;
+    int burgers = 5;
+    BOOL isGrillClean = YES;
     
-    //Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
-    //Use an if, else if and else check using any of the data types of your choice.
-    float test = 3;
-    int hello = 0;
-    BOOL myBool = YES;
-    
-    if ((test > 4) && (hello != 5)) {
-        NSLog(@"Only one thing smells like bacon, thats bacon.");
+    if ((peopleEating > 4) || (burgers != 5)) {
+        NSLog(@"Maybe grilled cheese would be a better option.");
     }
-    else if ((myBool = YES) || (hello > 2)) {
-        NSLog(@"Spam, spam, bacon, eggs, and spam.");
+    else if ((isGrillClean = YES) && (burgers > 2)) {
+        NSLog(@"Bacon cheese burgers it is.");
     }
     else {
-        NSLog(@"My spoon is too big!");
+        NSLog(@"I guess we could have salad...");
     }
     
-    //Perform a single for loop printing out values to the console
+    NSLog(@"Time to get the grill going.");
+    
+    //Single for loop logging how long until the grill is ready to cook on.
     for (int i = 3; i >= 1; i--) {
-        NSLog(@"Detination in T minus %d minutes.", i);
+        NSLog(@"T minus %d minutes until the grill is ready.", i);
     }
     
-    //Perform a nested loop printing out values to the console
+    NSLog(@"Burgers are on. Time to slice some cheese for them.");
     
-    for (int c = 5; c >= 1; c--) {
-        NSLog(@"I only have %d pieces of bacon. Mmmm bacon *drools*", c);
-        for (int i = 2; i >= 1; i--) {
-            NSLog(@"There are %d pieces of bacon and %d minutes.", c, i);
+    //Nested loop to log number cheese slices cut and countdown for when burgers will be ready
+    for (int cheese = 1; cheese <= 4; cheese++) {
+        NSLog(@"I have %d pieces of cheese sliced.", cheese);
+        for (int burgerTime = 6; burgerTime >= 2; burgerTime--) {
+            NSLog(@"%d cheese slices ready, and the burgers have %d minutes left.", cheese, burgerTime);
         }
         //break;
     }
-    NSLog(@"No more bacon :(");
+    NSLog(@"Burgers are alomost done. Time to cook the bacon.");
     
     
-    //Perform a while loop that increments an int variable and outputs to the console.
+    //While loop logging how long the bacon has left.
+    int minutesLeft = 5;
+    while (minutesLeft > 3) {
+        NSLog(@"%d minutes left until the bacon is ready.", minutesLeft);
+        minutesLeft --;
+    }
     
-    
+    NSLog(@"Our guests have arrived and dinner is almost done");
+    NSLog(@"Bacon is done! Time to eat!");
+    NSLog(@"Yum!");
     
     
     return YES;
