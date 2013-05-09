@@ -49,9 +49,14 @@
     }
     
     //Perform a single for loop printing out values to the console
-
+    for (int i = 1; i <= 3; i++)
+    {
+        NSLog(@"Detination in T minus %d minutes.", i);
+    }
     
-    //Perform a nested loop printing out values to the console    
+    //Perform a nested loop printing out values to the console
+    
+
     
     
     //Perform a while loop that increments an int variable and outputs to the console.
