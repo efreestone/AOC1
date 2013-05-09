@@ -21,37 +21,37 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    /*int temp = 426;
-    int numTires = 73.5;
-    NSLog(@"temp = %d, numTires = %d", temp, numTires);
-    
-    float celcius = 37.5f;
-    NSLog(@"celcius = %.2f", celcius);*/
-    
+    [self.window makeKeyAndVisible];    
     
     //Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
-    float time = 30.5;
-    float speed = 2;
+    float time = 30.9999f;
+    float speed = 2.0f;
     float timeLeft = speed * time;
     int math = (int) timeLeft;
     NSLog(@"There is currently %f minutes left.", time);
     NSLog(@"There is now %d minutes left.", math);
     
-    int hello = 0;
-    
     
     //Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
-    
-    
     //Use an if, else if and else check using any of the data types of your choice.
+    float test = 3;
+    int hello = 0;
+    BOOL myBool = YES;
     
+    if ((test > 4) && (hello != 5)) {
+        NSLog(@"Only one thing smells like bacon, thats bacon.");
+    }
+    else if ((myBool = YES) || (hello > 2)) {
+        NSLog(@"Spam, spam, bacon, eggs, and spam.");
+    }
+    else {
+        NSLog(@"My spoon is too big!");
+    }
     
     //Perform a single for loop printing out values to the console
+
     
-    
-    //Perform a nested loop printing out values to the console
+    //Perform a nested loop printing out values to the console    
     
     
     //Perform a while loop that increments an int variable and outputs to the console.
@@ -90,3 +90,12 @@
 }
 
 @end
+
+/*for (int c = 1; c <= 3; c++)
+{
+    NSLog(@"Using color filter number %d", c);
+    for (int i = 1; i<= 10; i++)
+    {
+        NSLog(@"Collecting image data with filter number %d for %d minutes.", c, i);
+    }
+}*/
