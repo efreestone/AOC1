@@ -49,7 +49,7 @@
     if ((peopleEating > 4) || (burgers != 5)) {
         NSLog(@"Maybe grilled cheese would be a better option.");
     }
-    else if ((isGrillClean = YES) && (burgers > 2)) {
+    else if ((isGrillClean == YES) && (burgers > 4)) {
         NSLog(@"Bacon cheese burgers it is.");
     }
     else {
@@ -68,12 +68,12 @@
     //Nested loop to log number cheese slices cut and countdown for when burgers will be ready
     for (int cheese = 1; cheese <= 4; cheese++) {
         NSLog(@"I have %d pieces of cheese sliced.", cheese);
-        for (int burgerTime = 6; burgerTime >= 2; burgerTime--) {
+        for (int burgerTime = 6; burgerTime >= 4; burgerTime--) {
             NSLog(@"%d cheese slices ready, and the burgers have %d minutes left.", cheese, burgerTime);
         }
         //break;
     }
-    NSLog(@"Burgers are alomost done. Time to cook the bacon.");
+    NSLog(@"Burgers are almost done. Time to cook the bacon.");
     
     //While loop logging how long the bacon has left.
     int minutesLeft = 4;
