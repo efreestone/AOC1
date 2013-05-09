@@ -1,4 +1,9 @@
-//
+//  Elijah Freestone
+//  AOC1 1305
+//  Project 1
+//  May 9th, 2013
+
+
 //  AppDelegate.m
 //  AOC1Project1
 //
@@ -23,6 +28,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    //Start of my story
     NSLog(@"Hello, my name is Elijah Freestone and tonight we will be making bacon cheese-burgers for some co-workers.");
     NSLog(@"Our dinner guest will be arriving soon.");
     
@@ -69,18 +75,18 @@
     }
     NSLog(@"Burgers are alomost done. Time to cook the bacon.");
     
-    
     //While loop logging how long the bacon has left.
-    int minutesLeft = 5;
-    while (minutesLeft > 3) {
+    int minutesLeft = 4;
+    
+    while (minutesLeft > 2) {
         NSLog(@"%d minutes left until the bacon is ready.", minutesLeft);
         minutesLeft --;
     }
     
-    NSLog(@"Our guests have arrived and dinner is almost done");
+    NSLog(@"Our guests have arrived and dinner is almost done.");
     NSLog(@"Bacon is done! Time to eat!");
     NSLog(@"Yum!");
-    
+    //End of my story
     
     return YES;
 }
