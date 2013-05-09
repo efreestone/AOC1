@@ -23,17 +23,23 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    int temp = 426;
+    /*int temp = 426;
     int numTires = 73.5;
     NSLog(@"temp = %d, numTires = %d", temp, numTires);
     
     float celcius = 37.5f;
-    NSLog(@"celcius = %.2f", celcius);
-    
-    //Create a new Empty Application Project
+    NSLog(@"celcius = %.2f", celcius);*/
     
     
     //Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
+    float time = 30.5;
+    float speed = 2;
+    float timeLeft = speed * time;
+    int math = (int) timeLeft;
+    NSLog(@"There is currently %f minutes left.", time);
+    NSLog(@"There is now %d minutes left.", math);
+    
+    int hello = 0;
     
     
     //Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
