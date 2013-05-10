@@ -37,6 +37,7 @@
     float traffic = 2;
     float timeLeft = traffic * time;
     int math = (int) timeLeft;
+    
     NSLog(@"Our guests should arrive in %.1f minutes. I should call them to check if they are on schedule.", time);
     NSLog(@"Looks like traffic is bad. They will now be arriving in %d minutes.", math);
     NSLog(@"There is also three of them instead of two. I sure hope I have enough burgers!");
@@ -70,9 +71,10 @@
         NSLog(@"I have %d pieces of cheese sliced.", cheese);
         for (int burgerTime = 6; burgerTime >= 4; burgerTime--) {
             NSLog(@"%d cheese slices ready, and the burgers have %d minutes left.", cheese, burgerTime);
-        }
+        } //This doesn't display quite the way I want it to yet. Still trying to work out a fix.
         //break;
     }
+    
     NSLog(@"Burgers are almost done. Time to cook the bacon.");
     
     //While loop logging how long the bacon has left.
