@@ -4,7 +4,7 @@
 //  May 14th, 2013
 
 //
-//  MainViewController.m
+//  ViewController.m
 //  AOC1Project2
 //
 //  Created by Elijah Freestone on 5/14/13.
