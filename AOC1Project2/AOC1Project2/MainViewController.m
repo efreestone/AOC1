@@ -1,18 +1,23 @@
+//  Elijah Freestone
+//  AOC1 1305
+//  Project 2
+//  May 14th, 2013
+
 //
-//  ViewController.m
+//  MainViewController.m
 //  AOC1Project2
 //
 //  Created by Elijah Freestone on 5/14/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {
