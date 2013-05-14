@@ -16,7 +16,7 @@
 		B89C49851742EA0000C3C5C1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C49841742EA0000C3C5C1 /* Default.png */; };
 		B89C49871742EA0000C3C5C1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C49861742EA0000C3C5C1 /* Default@2x.png */; };
 		B89C49891742EA0000C3C5C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C49881742EA0000C3C5C1 /* Default-568h@2x.png */; };
-		B89C498C1742EA0000C3C5C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89C498B1742EA0000C3C5C1 /* ViewController.m */; };
+		B89C498C1742EA0000C3C5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89C498B1742EA0000C3C5C1 /* MainViewController.m */; };
 		B89C498F1742EA0000C3C5C1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89C498D1742EA0000C3C5C1 /* ViewController_iPhone.xib */; };
 		B89C49921742EA0000C3C5C1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89C49901742EA0000C3C5C1 /* ViewController_iPad.xib */; };
 /* End PBXBuildFile section */
@@ -35,8 +35,8 @@
 		B89C49841742EA0000C3C5C1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B89C49861742EA0000C3C5C1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B89C49881742EA0000C3C5C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B89C498A1742EA0000C3C5C1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B89C498B1742EA0000C3C5C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B89C498A1742EA0000C3C5C1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B89C498B1742EA0000C3C5C1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B89C498E1742EA0000C3C5C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B89C49911742EA0000C3C5C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,8 +87,8 @@
 			children = (
 				B89C49811742EA0000C3C5C1 /* AppDelegate.h */,
 				B89C49821742EA0000C3C5C1 /* AppDelegate.m */,
-				B89C498A1742EA0000C3C5C1 /* ViewController.h */,
-				B89C498B1742EA0000C3C5C1 /* ViewController.m */,
+				B89C498A1742EA0000C3C5C1 /* MainViewController.h */,
+				B89C498B1742EA0000C3C5C1 /* MainViewController.m */,
 				B89C498D1742EA0000C3C5C1 /* ViewController_iPhone.xib */,
 				B89C49901742EA0000C3C5C1 /* ViewController_iPad.xib */,
 				B89C49791742EA0000C3C5C1 /* Supporting Files */,
@@ -179,7 +179,7 @@
 			files = (
 				B89C497F1742EA0000C3C5C1 /* main.m in Sources */,
 				B89C49831742EA0000C3C5C1 /* AppDelegate.m in Sources */,
-				B89C498C1742EA0000C3C5C1 /* ViewController.m in Sources */,
+				B89C498C1742EA0000C3C5C1 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
