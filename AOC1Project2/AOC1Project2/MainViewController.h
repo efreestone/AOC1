@@ -1,5 +1,10 @@
+//  Elijah Freestone
+//  AOC1 1305
+//  Project 2
+//  May 14th, 2013
+
 //
-//  ViewController.h
+//  MainViewController.h
 //  AOC1Project2
 //
 //  Created by Elijah Freestone on 5/14/13.
@@ -8,6 +13,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainViewController : UIViewController
 
 @end
