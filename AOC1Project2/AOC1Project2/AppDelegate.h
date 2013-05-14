@@ -1,8 +1,3 @@
-//  Elijah Freestone
-//  AOC1 1305
-//  Project 2
-//  May 14th, 2013
-
 //
 //  AppDelegate.h
 //  AOC1Project2
@@ -13,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end
