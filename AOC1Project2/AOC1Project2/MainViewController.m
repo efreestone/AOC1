@@ -4,7 +4,7 @@
 //  May 14th, 2013
 
 //
-//  ViewController.m
+//  MainViewController.m
 //  AOC1Project2
 //
 //  Created by Elijah Freestone on 5/14/13.
@@ -21,6 +21,12 @@
 
 - (void)viewDidLoad
 {
+    //Set background to custom color
+    self.view.backgroundColor = [UIColor colorWithRed:0.494 green:0.816 blue:0.878 alpha:1]; /*#7ed0e0*/
+    
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
