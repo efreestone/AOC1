@@ -62,9 +62,33 @@
         authorName.backgroundColor = [UIColor cyanColor];
         authorName.text = @"Dave Barry";
         authorName.textAlignment = NSTextAlignmentLeft;
-        authorName.textColor = [UIColor blackColor];
+        authorName.textColor = [UIColor brownColor];
         //Add Subview to add label in the view
         [self.view addSubview:authorName];
+    }
+
+    //UILabel for "Published:" label
+    UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,80,100,40)];
+    if (publishedLabel != nil)
+    {
+        publishedLabel.backgroundColor = [UIColor magentaColor];
+        publishedLabel.text = @"Published: ";
+        publishedLabel.textAlignment = NSTextAlignmentRight;
+        publishedLabel.textColor = [UIColor yellowColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:publishedLabel];
+    }
+    
+    //UILabel for Date Published
+    UILabel *publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(100,80,100,40)];
+    if (publishedDate != nil)
+    {
+        publishedDate.backgroundColor = [UIColor blueColor];
+        publishedDate.text = @"1983";
+        publishedDate.textAlignment = NSTextAlignmentLeft;
+        publishedDate.textColor = [UIColor redColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:publishedDate];
     }
 
     
@@ -85,7 +109,7 @@
     
     //DONE4.Create a UILabel on the next line called "Published:". This text is right justified.
     
-    //5.Create a label next to the Published label and add the text of when the book was published. This text is left justified.
+    //DONE5.Create a label next to the Published label and add the text of when the book was published. This text is left justified.
     
     //6.Create a UILabel with the text "Summary". This text is left justified.
     
