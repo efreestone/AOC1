@@ -33,20 +33,18 @@
     
     //UILabel for title of the book
     UILabel *bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,0,400,40)];
-    if (bookTitle != nil)
-    {
+    if (bookTitle != nil) {
         bookTitle.backgroundColor = [UIColor darkGrayColor];
         bookTitle.text = @"The Taming of the Screw";
         bookTitle.textAlignment = NSTextAlignmentCenter;
         bookTitle.textColor = [UIColor whiteColor];
-        //Add label to view
+        //Add Subview to add label in the view
         [self.view addSubview:bookTitle];
     }
     
     //UILabel for "Author:" label
     UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,40,100,40)];
-    if (authorLabel != nil)
-    {
+    if (authorLabel != nil) {
         authorLabel.backgroundColor = [UIColor purpleColor];
         authorLabel.text = @"Author: ";
         authorLabel.textAlignment = NSTextAlignmentRight;
@@ -57,8 +55,7 @@
     
     //UILabel for Author name
     UILabel *authorName = [[UILabel alloc] initWithFrame:CGRectMake(100,40,100,40)];
-    if (authorName != nil)
-    {
+    if (authorName != nil) {
         authorName.backgroundColor = [UIColor cyanColor];
         authorName.text = @"Dave Barry";
         authorName.textAlignment = NSTextAlignmentLeft;
@@ -69,8 +66,7 @@
 
     //UILabel for "Published:" label
     UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,80,100,40)];
-    if (publishedLabel != nil)
-    {
+    if (publishedLabel != nil) {
         publishedLabel.backgroundColor = [UIColor magentaColor];
         publishedLabel.text = @"Published: ";
         publishedLabel.textAlignment = NSTextAlignmentRight;
@@ -81,14 +77,24 @@
     
     //UILabel for Date Published
     UILabel *publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(100,80,100,40)];
-    if (publishedDate != nil)
-    {
+    if (publishedDate != nil) {
         publishedDate.backgroundColor = [UIColor blueColor];
         publishedDate.text = @"1983";
         publishedDate.textAlignment = NSTextAlignmentLeft;
         publishedDate.textColor = [UIColor redColor];
         //Add Subview to add label in the view
         [self.view addSubview:publishedDate];
+    }
+    
+    //UILabel for "Summary:"
+    UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,120,100,40)];
+    if (summaryLabel != nil) {
+        summaryLabel.backgroundColor = [UIColor greenColor];
+        summaryLabel.text = @"Summary: ";
+        summaryLabel.textAlignment = NSTextAlignmentLeft;
+        summaryLabel.textColor = [UIColor grayColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:summaryLabel];
     }
 
     
@@ -111,7 +117,7 @@
     
     //DONE5.Create a label next to the Published label and add the text of when the book was published. This text is left justified.
     
-    //6.Create a UILabel with the text "Summary". This text is left justified.
+    //DONE6.Create a UILabel with the text "Summary". This text is left justified.
     
     //7.Create another UILabel that contains a small summary of the book's plot. This text is centered and should span multiple lines.
     
