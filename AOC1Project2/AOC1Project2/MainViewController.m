@@ -32,7 +32,7 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.494 green:0.816 blue:0.878 alpha:1]; /*#7ed0e0*/
     
     //UILabel for title of the book
-    UILabel *bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,0,320,32)];
+    UILabel *bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,0,400,40)];
     if (bookTitle != nil)
     {
         bookTitle.backgroundColor = [UIColor darkGrayColor];
@@ -43,6 +43,33 @@
         [self.view addSubview:bookTitle];
     }
     
+    //UILabel for "Author:" label
+    UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,40,100,40)];
+    if (authorLabel != nil)
+    {
+        authorLabel.backgroundColor = [UIColor purpleColor];
+        authorLabel.text = @"Author: ";
+        authorLabel.textAlignment = NSTextAlignmentRight;
+        authorLabel.textColor = [UIColor lightGrayColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:authorLabel];
+    }
+    
+    //UILabel for Author name
+    UILabel *authorName = [[UILabel alloc] initWithFrame:CGRectMake(100,40,100,40)];
+    if (authorName != nil)
+    {
+        authorName.backgroundColor = [UIColor cyanColor];
+        authorName.text = @"Dave Barry";
+        authorName.textAlignment = NSTextAlignmentLeft;
+        authorName.textColor = [UIColor blackColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:authorName];
+    }
+
+    
+    
+    
     
 //Project instructions (delete before submitting!! Also on appDelegate.m)
     //DONE1.Change the background color of the view to any color you wish.
@@ -50,13 +77,13 @@
     
 //Book Information and UILabels
     
-    //1.Create a UILabel and place it at the top of the view. This is used as the title of the book. Center the text for this label.
+    //DONE1.Create a UILabel and place it at the top of the view. This is used as the title of the book. Center the text for this label.
     
-    //2.Create another label that contains the text "Author:" with the text right justified.
+    //DONE2.Create another label that contains the text "Author:" with the text right justified.
     
-    //3.Create a UILabel to the right of the author title label and have it contain the name of the author of the book you chose. This text will be left justified.
+    //DONE3.Create a UILabel to the right of the author title label and have it contain the name of the author of the book you chose. This text will be left justified.
     
-    //4.Create a UILabel on the next line called "Published:". This text is right justified.
+    //DONE4.Create a UILabel on the next line called "Published:". This text is right justified.
     
     //5.Create a label next to the Published label and add the text of when the book was published. This text is left justified.
     
