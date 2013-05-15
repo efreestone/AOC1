@@ -36,6 +36,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
+    //Project instructions (delete before submitting!! Also on MainViewController.m)
     //DONE1.Change the background color of the view to any color you wish. 
     
     
