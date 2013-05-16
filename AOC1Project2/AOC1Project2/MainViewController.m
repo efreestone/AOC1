@@ -120,7 +120,19 @@
         [self.view addSubview:listLabel];
     }
     
+    //Create NSString items to be added to my array
+    NSString *item1 = @"Viperench";
+    NSString *item2 = @"Hammerthumbsaurus";
+    NSString *item3 = @"Mandrill";
+    NSString *item4 = @"Fanged Screw";
+    NSString *item5 = @"Tarantulawl";
     
+    
+    //Create my NSArray with NSString items added to it
+    NSArray *myArray = [NSArray arrayWithObjects: item1, item2, item3, item4, item5, nil];
+
+    NSLog(@"%@", myArray);
+
     
     
 //Project instructions (delete before submitting!! Also on appDelegate.m)
