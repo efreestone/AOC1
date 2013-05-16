@@ -54,7 +54,7 @@
     }
     
     //UILabel for Author name
-    UILabel *authorName = [[UILabel alloc] initWithFrame:CGRectMake(100,40,100,40)];
+    UILabel *authorName = [[UILabel alloc] initWithFrame:CGRectMake(100,40,150,40)];
     if (authorName != nil) {
         authorName.backgroundColor = [UIColor cyanColor];
         authorName.text = @"Dave Barry";
@@ -76,10 +76,10 @@
     }
     
     //UILabel for Date Published
-    UILabel *publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(100,80,100,40)];
+    UILabel *publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(100,80,150,40)];
     if (publishedDate != nil) {
         publishedDate.backgroundColor = [UIColor blueColor];
-        publishedDate.text = @"1983";
+        publishedDate.text = @"April 27th, 1983";
         publishedDate.textAlignment = NSTextAlignmentLeft;
         publishedDate.textColor = [UIColor redColor];
         //Add Subview to add label in the view
@@ -96,7 +96,20 @@
         //Add Subview to add label in the view
         [self.view addSubview:summaryLabel];
     }
-
+    
+    //UILabel for Book Summary
+    UILabel *bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0,160,400,160)];
+    if (bookSummary != nil) {
+        bookSummary.backgroundColor = [UIColor orangeColor];
+        bookSummary.text = @"This book takes a humorous look at different DIY home repairs and the various ways your house and/or  tools will try and maim/kill you. Some of these include insulation, electrical, plumbing, and gardening. If your looking to read about home repair but learn absolutely nothing and have a good laugh, this book is for you.";
+        bookSummary.textAlignment = NSTextAlignmentCenter;
+        bookSummary.numberOfLines = 7;
+        bookSummary.textColor = [UIColor blackColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:bookSummary];
+    }
+    
+    
     
     
     
