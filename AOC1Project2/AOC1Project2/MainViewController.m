@@ -109,7 +109,16 @@
         [self.view addSubview:bookSummary];
     }
     
-    
+    //UILabel for "List of Items:"
+    UILabel *listLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,320,120,40)];
+    if (listLabel != nil) {
+        listLabel.backgroundColor = [UIColor colorWithRed:0.012 green:0.318 blue:0.012 alpha:1]; /*#035103*/
+        listLabel.text = @"List of Items: ";
+        listLabel.textAlignment = NSTextAlignmentLeft;
+        listLabel.textColor = [UIColor colorWithRed:0.643 green:0.988 blue:0.643 alpha:1]; /*#a4fca4*/
+        //Add Subview to add label in the view
+        [self.view addSubview:listLabel];
+    }
     
     
     
@@ -132,7 +141,7 @@
     
     //DONE6.Create a UILabel with the text "Summary". This text is left justified.
     
-    //7.Create another UILabel that contains a small summary of the book's plot. This text is centered and should span multiple lines.
+    //DONE7.Create another UILabel that contains a small summary of the book's plot. This text is centered and should span multiple lines.
     
     
 //Labels and Arrays
@@ -141,7 +150,7 @@
     
     //2.Create a variable of type NSMutableString and allocate it. Loop through the NSArray you created and append each of these items to your NSMutableString separated by commas. The last item should be preceded by an "and" (For example: dinosaurs, jeeps, storm, giant turkeys, and eating people).
     
-    //3.Create a label with the text "List of items" and add it to the parent view. Make sure the text is left justified.
+    //DONE3.Create a label with the text "List of items" and add it to the parent view. Make sure the text is left justified.
     
     //4.Create another label beneath and set the text to the NSMutableString text. Increase the number of lines if necessary. Make sure the text in this label is centered
     
