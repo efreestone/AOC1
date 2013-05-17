@@ -25,8 +25,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //Since starting at FSU, I havent had much time for reading any "real" books that weren't part of a course.
-    //The book I chose is a satirical comedy called "The Taming of the Screw" by Adam Berry.
+    //Since starting at FSU, I haven't had much time for reading any "real" books that weren't part of a course.
+    //The book I chose is a satirical comedy called "The Taming of the Screw" by Dave Barry.
     
     //Set background to custom color. My code starts here.
     self.view.backgroundColor = [UIColor colorWithRed:0.494 green:0.816 blue:0.878 alpha:1]; /*#7ed0e0*/
@@ -131,9 +131,19 @@
     //Create my NSArray with NSString items added to it
     NSArray *myArray = [NSArray arrayWithObjects: item1, item2, item3, item4, item5, nil];
 
-    NSLog(@"%@", myArray);
-
+    //NSLog(@"%@", myArray);
     
+    //Create a mutable string to append myArray to
+    NSMutableString *mutableList = [[NSMutableString alloc] init];
+
+    //Loop through myArray and print each item
+    for (int i=0; i<[myArray count]; i++) {
+        //NSLog(@"%@", [myArray objectAtIndex:i]);
+        [mutableList appendString:[NSString stringWithFormat:@"%@", myArray[i]]];
+        NSLog(@"%@", mutableList);
+    }
+    
+
     
 //Project instructions (delete before submitting!! Also on appDelegate.m)
     //DONE1.Change the background color of the view to any color you wish.
@@ -158,7 +168,7 @@
     
 //Labels and Arrays
     
-    //1.Create an NSArray of 5 items talked about in the book. These items will be NSStrings. Add the items to the array.
+    //DONE1.Create an NSArray of 5 items talked about in the book. These items will be NSStrings. Add the items to the array.
     
     //2.Create a variable of type NSMutableString and allocate it. Loop through the NSArray you created and append each of these items to your NSMutableString separated by commas. The last item should be preceded by an "and" (For example: dinosaurs, jeeps, storm, giant turkeys, and eating people).
     
