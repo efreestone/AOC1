@@ -31,9 +31,6 @@
     
     //Set background to custom color. My code starts here.
     self.view.backgroundColor = [UIColor colorWithRed:0.812 green:0.965 blue:0.976 alpha:1]; /*#cff6f9*/
-    //self.view.backgroundColor = [UIColor colorWithRed:0.576 green:0.929 blue:0.976 alpha:1]; /*#93edf9*/
-    //self.view.backgroundColor = [UIColor colorWithRed:0.494 green:0.816 blue:0.878 alpha:1]; /*#7ed0e0*/
-    //self.view.backgroundColor = [UIColor colorWithRed:0.384 green:0.616 blue:0.647 alpha:1]; /*#629da5*/
     
     //UILabel for title of the book
     UILabel *bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,0,320,35)];
