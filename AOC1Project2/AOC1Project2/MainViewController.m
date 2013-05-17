@@ -25,25 +25,29 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //Since starting at FSU, I haven't had much time for reading any "real" books that weren't part of a course.
-    //The book I chose is a satirical comedy called "The Taming of the Screw" by Dave Barry.
+    /*Since starting at FSU, I haven't had much time for reading any "real" books that weren't part of a course. The book I chose
+    is a satirical comedy called "The Taming of the Screw" by Dave Barry. It is more of a comedic how-to (or how-not-to) than a
+    story*/
     
     //Set background to custom color. My code starts here.
-    self.view.backgroundColor = [UIColor colorWithRed:0.494 green:0.816 blue:0.878 alpha:1]; /*#7ed0e0*/
+    self.view.backgroundColor = [UIColor colorWithRed:0.812 green:0.965 blue:0.976 alpha:1]; /*#cff6f9*/
+    //self.view.backgroundColor = [UIColor colorWithRed:0.576 green:0.929 blue:0.976 alpha:1]; /*#93edf9*/
+    //self.view.backgroundColor = [UIColor colorWithRed:0.494 green:0.816 blue:0.878 alpha:1]; /*#7ed0e0*/
+    //self.view.backgroundColor = [UIColor colorWithRed:0.384 green:0.616 blue:0.647 alpha:1]; /*#629da5*/
     
     //UILabel for title of the book
-    UILabel *bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,0,320,40)];
+    UILabel *bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,0,320,35)];
     if (bookTitle != nil) {
         bookTitle.backgroundColor = [UIColor darkGrayColor];
         bookTitle.text = @"The Taming of the Screw";
         bookTitle.textAlignment = NSTextAlignmentCenter;
-        bookTitle.textColor = [UIColor whiteColor];
+        bookTitle.textColor = [UIColor magentaColor];
         //Add Subview to add label in the view
         [self.view addSubview:bookTitle];
     }
     
     //UILabel for "Author:" label
-    UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,40,120,40)];
+    UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,40,120,35)];
     if (authorLabel != nil) {
         authorLabel.backgroundColor = [UIColor purpleColor];
         authorLabel.text = @"Author: ";
@@ -54,45 +58,45 @@
     }
     
     //UILabel for Author name
-    UILabel *authorName = [[UILabel alloc] initWithFrame:CGRectMake(120,40,200,40)];
+    UILabel *authorName = [[UILabel alloc] initWithFrame:CGRectMake(120,40,200,35)];
     if (authorName != nil) {
-        authorName.backgroundColor = [UIColor cyanColor];
+        authorName.backgroundColor = [UIColor brownColor];
         authorName.text = @"Dave Barry";
         authorName.textAlignment = NSTextAlignmentLeft;
-        authorName.textColor = [UIColor brownColor];
+        authorName.textColor = [UIColor cyanColor];
         //Add Subview to add label in the view
         [self.view addSubview:authorName];
     }
 
     //UILabel for "Published:" label
-    UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,80,120,40)];
+    UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,80,120,35)];
     if (publishedLabel != nil) {
-        publishedLabel.backgroundColor = [UIColor magentaColor];
+        publishedLabel.backgroundColor = [UIColor grayColor];
         publishedLabel.text = @"Published: ";
         publishedLabel.textAlignment = NSTextAlignmentRight;
-        publishedLabel.textColor = [UIColor yellowColor];
+        publishedLabel.textColor = [UIColor greenColor];
         //Add Subview to add label in the view
         [self.view addSubview:publishedLabel];
     }
     
     //UILabel for Date Published
-    UILabel *publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(120,80,200,40)];
+    UILabel *publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(120,80,200,35)];
     if (publishedDate != nil) {
         publishedDate.backgroundColor = [UIColor blueColor];
         publishedDate.text = @"April 27th, 1983";
         publishedDate.textAlignment = NSTextAlignmentLeft;
-        publishedDate.textColor = [UIColor redColor];
+        publishedDate.textColor = [UIColor orangeColor];
         //Add Subview to add label in the view
         [self.view addSubview:publishedDate];
     }
     
     //UILabel for "Summary:"
-    UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,120,120,40)];
+    UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,120,120,35)];
     if (summaryLabel != nil) {
-        summaryLabel.backgroundColor = [UIColor greenColor];
+        summaryLabel.backgroundColor = [UIColor redColor];
         summaryLabel.text = @"Summary: ";
         summaryLabel.textAlignment = NSTextAlignmentLeft;
-        summaryLabel.textColor = [UIColor grayColor];
+        summaryLabel.textColor = [UIColor yellowColor];
         //Add Subview to add label in the view
         [self.view addSubview:summaryLabel];
     }
@@ -100,17 +104,17 @@
     //UILabel for Book Summary
     UILabel *bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0,160,320,200)];
     if (bookSummary != nil) {
-        bookSummary.backgroundColor = [UIColor orangeColor];
-        bookSummary.text = @"This book takes a humorous look at different DIY home repairs and the various ways your house and/or  tools will try and maim/kill you. Some of these include insulation, electrical, plumbing, and gardening. If your looking to read about home repair but learn absolutely nothing and have a good laugh while your at it, this book is for you.";
+        bookSummary.backgroundColor = [UIColor blackColor];
+        bookSummary.text = @"This book takes a humorous look at different DIY home repairs and the various ways your house and/or tools will try and maim/kill you. Some of these include insulation, electrical, plumbing, and gardening. If your looking to read about home repair but learn absolutely nothing and have a good laugh while your at it, this book is for you.";
         bookSummary.textAlignment = NSTextAlignmentCenter;
         bookSummary.numberOfLines = 9;
-        bookSummary.textColor = [UIColor blackColor];
+        bookSummary.textColor = [UIColor whiteColor];
         //Add Subview to add label in the view
         [self.view addSubview:bookSummary];
     }
     
     //UILabel for "List of Items:"
-    UILabel *listLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,360,120,40)];
+    UILabel *listLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,365,120,35)];
     if (listLabel != nil) {
         listLabel.backgroundColor = [UIColor colorWithRed:0.008 green:0.6 blue:0.008 alpha:1]; /*#029902*/
         listLabel.text = @"List of Items: ";
@@ -146,7 +150,7 @@
     [mutableList insertString:@", and " atIndex:52];
     
     //UILabel to display list of items from mutableList
-    UILabel *listOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0,400,320,60)];
+    UILabel *listOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0,405,320,60)];
     if (listOfItems != nil) {
         listOfItems.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.408 alpha:1]; /*#000068*/
         listOfItems.text = mutableList;
