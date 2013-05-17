@@ -112,7 +112,7 @@
     //UILabel for "List of Items:"
     UILabel *listLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,320,120,40)];
     if (listLabel != nil) {
-        listLabel.backgroundColor = [UIColor colorWithRed:0.012 green:0.318 blue:0.012 alpha:1]; /*#035103*/
+        listLabel.backgroundColor = [UIColor colorWithRed:0.008 green:0.6 blue:0.008 alpha:1]; /*#029902*/
         listLabel.text = @"List of Items: ";
         listLabel.textAlignment = NSTextAlignmentLeft;
         listLabel.textColor = [UIColor colorWithRed:0.643 green:0.988 blue:0.643 alpha:1]; /*#a4fca4*/
@@ -150,7 +150,18 @@
     [mutableList insertString:@", and " atIndex:52];
     
     NSLog(@"%@", mutableList);
-
+    
+    //UILabel to display list of items from mutableList
+    UILabel *listOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0,360,400,60)];
+    if (listOfItems != nil) {
+        listOfItems.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.408 alpha:1]; /*#000068*/
+        listOfItems.text = mutableList;
+        listOfItems.textAlignment = NSTextAlignmentCenter;
+        listOfItems.numberOfLines = 2;
+        listOfItems.textColor = [UIColor colorWithRed:0.765 green:0.745 blue:0.929 alpha:1]; /*#c3beed*/
+        //Add Subview to add label in the view
+        [self.view addSubview:listOfItems];
+    }
     
 //Project instructions (delete before submitting!! Also on appDelegate.m)
     //DONE1.Change the background color of the view to any color you wish.
@@ -181,7 +192,7 @@
     
     //DONE3.Create a label with the text "List of items" and add it to the parent view. Make sure the text is left justified.
     
-    //4.Create another label beneath and set the text to the NSMutableString text. Increase the number of lines if necessary. Make sure the text in this label is centered
+    //DONE4.Create another label beneath and set the text to the NSMutableString text. Increase the number of lines if necessary. Make sure the text in this label is centered
     
 //Make sure that all code is presented neatly and logically AND refactored as much as possible.
 
