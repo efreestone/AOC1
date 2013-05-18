@@ -128,26 +128,27 @@
     NSString *listItem4 = @"Fanged Screw";
     NSString *listItem5 = @"Tarantulawl";
     
-    
     //Create my NSArray with NSString items added to it
     NSArray *myArray = [NSArray arrayWithObjects: listItem1, listItem2, listItem3, listItem4, listItem5, nil];
     
     //Create a mutable string to append myArray to
     NSMutableString *mutableList = [[NSMutableString alloc] initWithCapacity:0];
-
-    //Loop through myArray and print each item
+    
+    //Loop through myArray and print each item (woohoo its dynamic and actually works right!!)
     for (int i=0; i<[myArray count]; i++) {
-        [mutableList appendString:[NSString stringWithFormat:@"%@", [myArray objectAtIndex:i]]];
+        if (i == [myArray count] - 2) {
+            [mutableList appendString:[NSString stringWithFormat:@"%@, and ", myArray[i]]];
+        }
+        else if (i == [myArray count] - 1) {
+            [mutableList appendString:[NSString stringWithFormat:@"%@", myArray[i]]];
+        }
+        else {
+            [mutableList appendString:[NSString stringWithFormat:@"%@, ", myArray[i]]];
+        }
     }
     
-    //Insert commas and "and" to mutableList (I'm trying to figure out adding this in my loop, but no luck yet)
-    [mutableList insertString:@", " atIndex:9];
-    [mutableList insertString:@", " atIndex:28];
-    [mutableList insertString:@", " atIndex:38];
-    [mutableList insertString:@", and " atIndex:52];
-    
     //UILabel to display list of items from mutableList
-    UILabel *listOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0,405,320,60)];
+    UILabel *listOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0,405,320,55)];
     if (listOfItems != nil) {
         listOfItems.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.408 alpha:1]; /*#000068*/
         listOfItems.text = mutableList;
