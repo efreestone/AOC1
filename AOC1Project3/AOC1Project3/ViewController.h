@@ -18,11 +18,17 @@
 
 }
 //Declare my Add function
-- (int)Add:(NSInteger)number1 toInteger:(NSInteger)number2;
+-(int)Add:(NSInteger)number1 toInteger:(NSInteger)number2;
 
--(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
+//Declare my Compare function
+-(BOOL)Compare:(NSInteger)boolOne toInteger:(NSInteger)boolTwo;
 
--(float)getWidthFromCGRect:(CGRect)rect;
+//Declare my Append function
+-(NSString*)Append:(NSString*)stringOne toString:(NSString*)stringTwo;
+
+//Declare my displayAlertWithString function
+-(void)displayAlertWithString:(NSString*)alertDialog;
+
 
 
 
