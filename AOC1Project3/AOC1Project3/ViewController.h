@@ -23,6 +23,12 @@
 //Declare my Compare function
 -(BOOL)Compare:(NSInteger)boolOne toInteger:(NSInteger)boolTwo;
 
+//Declare my Append function
+-(NSString*)Append:(NSString*)stringOne toString:(NSString*)stringTwo;
+
+//Declare my displayAlertWithString function
+-(void)displayAlertWithString:(NSString*)alertDialog;
+
 
 
 
