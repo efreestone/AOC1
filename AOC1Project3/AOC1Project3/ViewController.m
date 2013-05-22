@@ -19,6 +19,12 @@
 
 @implementation ViewController
 
+//"Add" function takes two integers, adds them and returns the result. Called w/ myResult
+- (int)Add:(NSInteger)numberOne toInteger:(NSInteger)numberTwo {
+    return (numberOne + numberTwo);
+}
+
+
 - (void)viewDidLoad
 {
     //Instructions - DELETE FROM FINAL!!
@@ -26,7 +32,7 @@
     viewDidLoad function of your viewController.m.
     The project is broken down into sections*/
     
-    //1. Create a function called Add. This function will take two NSInteger or int types and return the result of an addition between these two.
+    //DONE1. Create a function called Add. This function will take two NSInteger or int types and return the result of an addition between these two.
     //2. Create a BOOL function called Compare that takes two NSInteger values. Return YES or NO based on whether the values are equal.
     //3. Create a function called Append. This function will take two NSStrings and return a new NSString containing the appended strings using an NSMutableString and the Append method.
     //4. Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
@@ -43,9 +49,33 @@
     /* Due: Thu, 23 May */
     //End of instructions - DELETE FROM FINAL!!
     
+
+    
+        /*int returnValue = [self printDebugInfo:@"this is bacon on a stick" numLines:5];
+    
+        float widthValue = [self getWidthFromCGRect:CGRectMake(0, 0, 354.0f, 200.0f)];*/
+    
+        //[self Add:@"%i %i", number1, number2];
+    
+    //Call add function and test
+    int myResult = [self Add:2 toInteger:7];
+    NSLog(@"%d out of 10 people love bacon.", myResult);
+    
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(float)getWidthFromCGRect:(CGRect)rect {
+    return rect.size.width;
+}
+
+-(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines
+{
+    NSLog(@"%@", debugString);
+    
+    return 4;
 }
 
 - (void)didReceiveMemoryWarning

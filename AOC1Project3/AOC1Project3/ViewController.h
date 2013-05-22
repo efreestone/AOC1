@@ -14,5 +14,16 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+
+}
+//Declare my Add function
+- (int)Add:(NSInteger)number1 toInteger:(NSInteger)number2;
+
+-(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
+
+-(float)getWidthFromCGRect:(CGRect)rect;
+
+
 
 @end
