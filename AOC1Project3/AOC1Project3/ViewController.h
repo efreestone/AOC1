@@ -18,7 +18,10 @@
 
 }
 //Declare my Add function
-- (int)Add:(NSInteger)number1 toInteger:(NSInteger)number2;
+-(int)Add:(NSInteger)number1 toInteger:(NSInteger)number2;
+
+//Declare my Compare function
+-(BOOL)Compare:(NSInteger)boolOne toInteger:(NSInteger)boolTwo;
 
 -(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
 
