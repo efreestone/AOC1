@@ -58,14 +58,7 @@
     
     /* Due: Thu, 23 May */
     //End of instructions - DELETE FROM FINAL!!
-    
 
-    
-        /*int returnValue = [self printDebugInfo:@"this is bacon on a stick" numLines:5];
-    
-        float widthValue = [self getWidthFromCGRect:CGRectMake(0, 0, 354.0f, 200.0f)];*/
-    
-        //[self Add:@"%i %i", number1, number2];
     
     //Call "Add" function and test
     int myResult = [self Add:2 toInteger:7];
