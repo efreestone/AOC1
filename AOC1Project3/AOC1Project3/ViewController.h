@@ -23,9 +23,6 @@
 //Declare my Compare function
 -(BOOL)Compare:(NSInteger)boolOne toInteger:(NSInteger)boolTwo;
 
--(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
-
--(float)getWidthFromCGRect:(CGRect)rect;
 
 
 
