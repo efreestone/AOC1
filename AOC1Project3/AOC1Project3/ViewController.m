@@ -50,6 +50,7 @@
 }
 
 
+
 - (void)viewDidLoad
 {
     //Instructions - DELETE FROM FINAL!!
@@ -63,7 +64,7 @@
     //DONE4. Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
     //DONE5. Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
     //DONE6. Call the Add function passing in two integer values. Capture the return of this function into a variable.
-    //7. Bundle the returned integer into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
+    //7. Bundle the returned integer (from Add)into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
     //8. Give it some text for the title. The message will read, "The number is 00". Replace the 00 with the integer passed into the function.
     //9. Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
     
@@ -87,6 +88,18 @@
     NSString *newString = [self Append:@"Did it work? " toString:@"Yeppers!"];
     //Call displayAlertWithString to pop up UIAlert with newString as text
     [self displayAlertWithString:newString];
+    
+    //Change int myResult into NSNumber before converting to NSString
+    NSNumber *convertNumber = [[NSNumber alloc] initWithInt:myResult];
+    //Convert convertNumber to NSString
+    NSString *numString = [convertNumber stringValue];
+    //Create message to append convertNumber to
+    NSString *numberText = [NSString stringWithFormat:@"The number is " ];
+    //Append numberText to numString
+    NSString *appendNumber = [self Append:numberText toString:numString];
+    NSLog(@"%@", appendNumber);
+
+    
 
     /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"I broke it" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     if (alertView != nil) {
@@ -96,17 +109,6 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
--(float)getWidthFromCGRect:(CGRect)rect {
-    return rect.size.width;
-}
-
--(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines
-{
-    NSLog(@"%@", debugString);
-    
-    return 4;
 }
 
 - (void)didReceiveMemoryWarning
