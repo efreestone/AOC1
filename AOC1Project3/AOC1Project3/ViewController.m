@@ -19,12 +19,12 @@
 
 @implementation ViewController
 
-//"Add" function takes two integers, adds them and returns the result. Called w/ myResult
+//"Add" function takes two integers, adds them and returns the result. Called and stored w/ myResult
 -(int)Add:(NSInteger)numberOne toInteger:(NSInteger)numberTwo {
     return (numberOne + numberTwo);
 }
 
-//"Compare" function compares 2 NSIntegers and returns YES or NO based on if they are equal. Called w/ myBool
+//"Compare" function compares 2 NSIntegers and returns YES or NO based on if they are equal. Called and stored w/ myBool
 -(BOOL)Compare:(NSInteger)boolOne toInteger:(NSInteger)boolTwo {
     if (boolOne == boolTwo){
         return YES;
@@ -34,7 +34,7 @@
     }
 }
 
-//"Append" function combines 2 NSStrings with append and returns a combined NSString. Called w/ 
+//"Append" function combines 2 NSStrings with append and returns a combined NSString. Called w/ newString
 -(NSString*)Append:(NSString*)stringOne toString:(NSString*)stringTwo {
     NSMutableString *appendString = [[NSMutableString alloc] initWithString:stringOne];
     NSString *combinedString = [appendString stringByAppendingString:stringTwo];
@@ -64,8 +64,8 @@
     //DONE4. Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
     //DONE5. Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
     //DONE6. Call the Add function passing in two integer values. Capture the return of this function into a variable.
-    //7. Bundle the returned integer (from Add)into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
-    //8. Give it some text for the title. The message will read, "The number is 00". Replace the 00 with the integer passed into the function.
+    //DONE7. Bundle the returned integer (from Add)into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
+    //???8. Give it some text for the title. The message will read, "The number is 00". Replace the 00 with the integer passed into the function.
     //9. Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
     
     //DisplayAlertWithString Function
