@@ -97,14 +97,10 @@
     NSString *numberText = [NSString stringWithFormat:@"The number is " ];
     //Append numberText to numString
     NSString *appendNumber = [self Append:numberText toString:numString];
-    NSLog(@"%@", appendNumber);
+    //NSLog(@"%@", appendNumber);
+    //Add appendnumber to displayAlertWithString and display in UIAlert
+    [self displayAlertWithString:appendNumber];
 
-    
-
-    /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"I broke it" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    if (alertView != nil) {
-        [alertView show];
-    }*/
 
     
     [super viewDidLoad];
