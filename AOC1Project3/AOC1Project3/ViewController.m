@@ -64,7 +64,6 @@
     NSInteger firstNumber = 5;
     NSInteger secondNumber = 5;
     BOOL myBool = [self Compare:firstNumber toInteger:secondNumber];
-    //NSLog(@"Would you like some bacon? %@!", myBool ? @"YES" : @"NO");
     //Convert myBool to an NSString to be displayed in a UIAlertView. %ld to cast NSInteger to long int
     NSString *boolString = [NSString stringWithFormat:@"Is %ld == %ld? %@", (long)firstNumber, (long)secondNumber, myBool ? @"YES" : @"NO"];
     //Use displayAlertWithString to display boolString in UIAlert. If statement to avoid error
