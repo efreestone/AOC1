@@ -19,12 +19,12 @@
 
 @implementation ViewController
 
-//"Add" function takes two integers, adds them and returns the result. Called w/ myResult
+//"Add" function takes two integers, adds them and returns the result. Called and stored w/ myResult
 -(int)Add:(NSInteger)numberOne toInteger:(NSInteger)numberTwo {
     return (numberOne + numberTwo);
 }
 
-//"Compare" function compares 2 NSIntegers and returns YES or NO based on if they are equal. Called w/ myBool
+//"Compare" function compares 2 NSIntegers and returns YES or NO based on if they are equal. Called and stored w/ myBool
 -(BOOL)Compare:(NSInteger)boolOne toInteger:(NSInteger)boolTwo {
     if (boolOne == boolTwo){
         return YES;
@@ -34,7 +34,7 @@
     }
 }
 
-//"Append" function combines 2 NSStrings with append and returns a combined NSString. Called w/ 
+//"Append" function combines 2 NSStrings with append and returns a combined NSString. Called w/ newString
 -(NSString*)Append:(NSString*)stringOne toString:(NSString*)stringTwo {
     NSMutableString *appendString = [[NSMutableString alloc] initWithString:stringOne];
     NSString *combinedString = [appendString stringByAppendingString:stringTwo];
@@ -50,63 +50,44 @@
 }
 
 
-- (void)viewDidLoad
-{
-    //Instructions - DELETE FROM FINAL!!
-    /*Create a new single-view application project. All of your initial code will take place in the
-    viewDidLoad function of your viewController.m.
-    The project is broken down into sections*/
-    
-    //DONE1. Create a function called Add. This function will take two NSInteger or int types and return the result of an addition between these two.
-    //DONE2. Create a BOOL function called Compare that takes two NSInteger values. Return YES or NO based on whether the values are equal.
-    //DONE3. Create a function called Append. This function will take two NSStrings and return a new NSString containing the appended strings using an NSMutableString and the Append method.
-    //DONE4. Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
-    //DONE5. Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
-    //DONE6. Call the Add function passing in two integer values. Capture the return of this function into a variable.
-    //7. Bundle the returned integer into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
-    //8. Give it some text for the title. The message will read, "The number is 00". Replace the 00 with the integer passed into the function.
-    //9. Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
-    
-    //DisplayAlertWithString Function
-    //1. Take the passed in NSString and display it in the alert view
-    //2. Create an UIAlertView
-    
-    /* Due: Thu, 23 May */
-    //End of instructions - DELETE FROM FINAL!!
 
-    
-    //Call "Add" function and test
-    int myResult = [self Add:2 toInteger:7];
-    NSLog(@"%d out of 10 people love bacon.", myResult);
-    
-    //Call "Compare" function and test
-    BOOL myBool = [self Compare:5 toInteger:5];
-    NSLog(@"Would you like some bacon? %@!", myBool ? @"YES" : @"NO");
-    
-    //Call "Append" function and test
+- (void)viewDidLoad
+{    
+    //Call "Append" function and display
     NSString *newString = [self Append:@"Did it work? " toString:@"Yeppers!"];
     //Call displayAlertWithString to pop up UIAlert with newString as text
-    [self displayAlertWithString:newString];
-
-    /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"I broke it" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    if (alertView != nil) {
-        [alertView show];
-    }*/
-
+    if (newString != nil) {
+        [self displayAlertWithString:newString];
+    }
+    
+    //Define variables and Call "Compare" function, display in UIAlert with displayAlertWithString
+    NSInteger firstNumber = 5;
+    NSInteger secondNumber = 5;
+    BOOL myBool = [self Compare:firstNumber toInteger:secondNumber];
+    //Convert myBool to an NSString to be displayed in a UIAlertView. %ld to cast NSInteger to long int
+    NSString *boolString = [NSString stringWithFormat:@"Is %ld == %ld? %@", (long)firstNumber, (long)secondNumber, myBool ? @"YES" : @"NO"];
+    //Use displayAlertWithString to display boolString in UIAlert. If statement to avoid error
+    if (firstNumber == secondNumber) {
+        [self displayAlertWithString:boolString];
+    }
+    
+    //Call "Add" function to be converted and displayed with displayAlertWithString
+    int myResult = [self Add:2 toInteger:7];
+    //Change int myResult into NSNumber before converting to NSString. Used numberWithInt for mem auto-release
+    NSNumber *convertNumber = [NSNumber numberWithInt:myResult];
+    //Convert convertNumber to NSString
+    NSString *numString = [convertNumber stringValue];
+    //Create message to append convertNumber to
+    NSString *numberText = [NSString stringWithFormat:@"The number is " ];
+    //Append numberText to numString
+    NSString *appendNumber = [self Append:numberText toString:numString];
+    //Use displayAlertWithString to display appendNumber in UIAlert
+    if (appendNumber != nil) {
+        [self displayAlertWithString:appendNumber];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
--(float)getWidthFromCGRect:(CGRect)rect {
-    return rect.size.width;
-}
-
--(int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines
-{
-    NSLog(@"%@", debugString);
-    
-    return 4;
 }
 
 - (void)didReceiveMemoryWarning
