@@ -1,3 +1,8 @@
+//  Elijah Freestone
+//  AOC1 1305
+//  Project 4
+//  May 27th, 2013
+
 //
 //  AppDelegate.h
 //  AOC1Project4
