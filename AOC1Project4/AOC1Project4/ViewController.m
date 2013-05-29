@@ -25,10 +25,31 @@
     
 /* Section 1 */
 /* Login */
-    //1. Create a UILabel near the top of your screen with teh text 1. "Username:" in it.
+    //1. Create a UILabel near the top of your screen with the text "Username:" in it.
+    UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f,15.0f,90.0f,35.0f)];
+    if (userLabel != nil) {
+        userLabel.text = @"Username: ";
+        userLabel.textAlignment = NSTextAlignmentLeft;
+        userLabel.textColor = [UIColor darkGrayColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:userLabel];
+    }
+    
     //2. Create a UITextField to the right of the username label.
+    
     //3. Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (button != nil) {
+        button.frame = CGRectMake(110.0f, 60.0f, 100.0f, 50.0f);
+        button.tintColor = [UIColor greenColor];
+        [button setTitle:@"Login" forState:UIControlStateNormal];
+        [button setTitle:@"Pushed" forState:UIControlStateHighlighted];
+        //Add Subview to add button in the view
+        [self.view addSubview:button];
+    }
+    
     //4. Create another UILabel beneath with the default text "Please Enter Username".
+    
     //5. Add a target to the UIButton to call a function called onClick when the user presses the Login button.
     //6. If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
     //7. Hint: NSString has a property called length that tells you how many characters are in the string.
@@ -45,6 +66,12 @@ NSDate object.*/
 /* Information - this section will display the text "This application was created by: Firstname
 Lastname" in a label when the info button is clicked.*/
     //1. Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    if (infoButton != nil) {
+        //infoButton.backgroundColor = [UIColor redColor];
+        infoButton.frame = CGRectMake(145.0f, 150.0f, 30.0f, 30.0f);
+        [self.view addSubview:infoButton];
+    }
     //2. Create a UILabel beneath it that contains no initial text.
     //3. Hook up an action to the info button to have it call the onClick handler you created earlier.
     //4. When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
