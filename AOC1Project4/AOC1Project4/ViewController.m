@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad
 {
+    self.view.backgroundColor = [UIColor colorWithRed:0.812 green:0.965 blue:0.976 alpha:1]; /*#cff6f9*/
     /* Instructions: DELETE FROM FINAL!! */
     
 /* Section 1 */
@@ -38,14 +39,14 @@
     //2. Create a UITextField to the right of the username label.
     
     //3. Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    if (button != nil) {
-        button.frame = CGRectMake(110.0f, 60.0f, 100.0f, 50.0f);
-        button.tintColor = [UIColor greenColor];
-        [button setTitle:@"Login" forState:UIControlStateNormal];
-        [button setTitle:@"Pushed" forState:UIControlStateHighlighted];
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (loginButton != nil) {
+        loginButton.frame = CGRectMake(110.0f, 60.0f, 100.0f, 50.0f);
+        loginButton.tintColor = [UIColor greenColor];
+        [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        [loginButton setTitle:@"Pushed" forState:UIControlStateHighlighted];
         //Add Subview to add button in the view
-        [self.view addSubview:button];
+        [self.view addSubview:loginButton];
     }
     
     //4. Create another UILabel beneath with the default text "Please Enter Username".
@@ -69,7 +70,7 @@ Lastname" in a label when the info button is clicked.*/
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (infoButton != nil) {
         //infoButton.backgroundColor = [UIColor redColor];
-        infoButton.frame = CGRectMake(145.0f, 150.0f, 30.0f, 30.0f);
+        infoButton.frame = CGRectMake(145.0f, 250.0f, 30.0f, 30.0f);
         [self.view addSubview:infoButton];
     }
     //2. Create a UILabel beneath it that contains no initial text.
