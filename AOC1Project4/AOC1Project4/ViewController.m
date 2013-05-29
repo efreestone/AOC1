@@ -36,6 +36,7 @@
     //6. If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
     //7. Hint: NSString has a property called length that tells you how many characters are in the string.
     
+    
     //Create UILabel for username
     UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f,15.0f,90.0f,35.0f)];
     if (userLabel != nil) {
@@ -82,10 +83,22 @@
 /*Date - this section will display a UIAlertView with the current date and time in it using an
 NSDate object.*/
     
-    //1. Create a UIButton using the rounded rectangle type. Give this button any color you wish.
-    //2. Add the text "Show Date" to the button
+    //DONE1. Create a UIButton using the rounded rectangle type. Give this button any color you wish.
+    //DONE2. Add the text "Show Date" to the button
     //3. Add an action to the button that when clicked, it will call the same onClick handler you already defined. Make sure to add a tag to the date button so you know which one was pressed.
     //4. Display a UIAlertView with the current date and time displayed in the format seen in the dateAlert graphic in the assets section of this project assignment. You can either format the date and time manually or use the date and time styles. You must use an NSDate object to gather the date and time information.
+    
+    
+    //Create Show Date button
+    UIButton *dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (dateButton != nil) {
+        dateButton.frame = CGRectMake(110.0f, 250.0f, 100.0f, 50.0f);
+        dateButton.tintColor = [UIColor blueColor];
+        [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
+        [dateButton setTitle:@"Pushed" forState:UIControlStateHighlighted];
+        //Add Subview to add button in the view
+        [self.view addSubview:dateButton];
+    }
     
 /* Section 3 Instructions: DELETE FROM FINAL!! */
 /* Information - this section will display the text "This application was created by: Firstname
@@ -96,11 +109,13 @@ Lastname" in a label when the info button is clicked.*/
     //3. Hook up an action to the info button to have it call the onClick handler you created earlier.
     //4. When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     
+    
     //Create info button to display "created by" text
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (infoButton != nil) {
         //infoButton.backgroundColor = [UIColor redColor];
-        infoButton.frame = CGRectMake(145.0f, 250.0f, 30.0f, 30.0f);
+        infoButton.frame = CGRectMake(145.0f, 350.0f, 30.0f, 30.0f);
+        //Add Subview to add button in the view
         [self.view addSubview:infoButton];
     }
     
