@@ -19,6 +19,14 @@
 
 @implementation ViewController
 
+//Create onClick function and test with UIAlert
+-(void)onClick {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Popup" message:@"it works!" delegate:nil cancelButtonTitle:@"bacon" otherButtonTitles:nil];
+    if (alertView != nil) {
+        [alertView show];
+    }
+}
+
 - (void)viewDidLoad
 {
     self.view.backgroundColor = [UIColor whiteColor];
@@ -64,6 +72,7 @@
         loginButton.tintColor = [UIColor greenColor];
         [loginButton setTitle:@"Login" forState:UIControlStateNormal];
         [loginButton setTitle:@"Pushed" forState:UIControlStateHighlighted];
+        [loginButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
         //Add Subview to add button in the view
         [self.view addSubview:loginButton];
     }
@@ -92,8 +101,8 @@ NSDate object.*/
     //Create Show Date button
     UIButton *dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (dateButton != nil) {
-        dateButton.frame = CGRectMake(110.0f, 250.0f, 100.0f, 50.0f);
-        dateButton.tintColor = [UIColor blueColor];
+        dateButton.frame = CGRectMake(110.0f, 225.0f, 100.0f, 50.0f);
+        dateButton.tintColor = [UIColor yellowColor];
         [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
         [dateButton setTitle:@"Pushed" forState:UIControlStateHighlighted];
         //Add Subview to add button in the view
@@ -105,7 +114,7 @@ NSDate object.*/
 Lastname" in a label when the info button is clicked.*/
     
     //DONE1. Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
-    //2. Create a UILabel beneath it that contains no initial text.
+    //DONE2. Create a UILabel beneath it that contains no initial text.
     //3. Hook up an action to the info button to have it call the onClick handler you created earlier.
     //4. When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     
@@ -114,9 +123,20 @@ Lastname" in a label when the info button is clicked.*/
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (infoButton != nil) {
         //infoButton.backgroundColor = [UIColor redColor];
-        infoButton.frame = CGRectMake(145.0f, 350.0f, 30.0f, 30.0f);
+        infoButton.frame = CGRectMake(145.0f, 345.0f, 30.0f, 30.0f);
         //Add Subview to add button in the view
         [self.view addSubview:infoButton];
+    }
+    
+    //Create empty UILabel to later display "created by" text
+    UILabel *emptyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,370.0f,320.0f,35.0f)];
+    if (emptyLabel != nil) {
+        //emptyLabel.backgroundColor = [UIColor darkGrayColor];
+        emptyLabel.text = @"Test";
+        emptyLabel.textAlignment = NSTextAlignmentCenter;
+        //emptyLabel.textColor = [UIColor whiteColor];
+        //Add Subview to add label in the view
+        [self.view addSubview:emptyLabel];
     }
     
     /* End Instructions: DELETE FROM FINAL!! */
