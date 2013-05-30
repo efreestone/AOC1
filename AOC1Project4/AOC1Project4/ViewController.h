@@ -15,9 +15,8 @@
 
 @interface ViewController : UIViewController
 {
-    
+    //Declare emptyLabel to display "created by"
     UILabel *emptyLabel;
-
 }
 
 //Declare onClick function
