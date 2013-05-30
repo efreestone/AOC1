@@ -29,9 +29,33 @@
 //Create onClick function to be called by each button based on tag number defined above
 -(void)onClick:(UIButton*)buttonClicked {
     if (buttonClicked.tag == LOGIN_BUTTON) { //loginButton
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked login" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        if (alertView != nil) {
-            [alertView show];
+        NSLog(@"Login button pressed");
+        //Save username text input to variable userInput. To be appended to another string in if statement
+        NSString *userInput = [userTextfield text];
+        if (userInput.length > 0) {
+        //Create NSString to be displayed as userNotice.text with userInput appended
+        NSString *userInfo = [[NSString alloc] initWithFormat:@"User: %@ has been logged in", userInput];
+        //Add second line if username is longer than 9 characters. 10 works in most cases but adds ... if wider characters (like W) are used
+            if (userInfo.length > 34) {
+                userNotice.frame = CGRectMake(0.0f,120.0f,320.0f,60.0f);
+                userNotice.numberOfLines = 2;
+            } else {
+                userNotice.frame = CGRectMake(0.0f,120.0f,320.0f,35.0f);
+                userNotice.numberOfLines = 1;
+            }
+        userNotice.backgroundColor = [UIColor blueColor];
+        userNotice.textColor = [UIColor whiteColor];
+        //Apply userInfo string to .text
+        userNotice.text = userInfo;
+        //Hide keyboard after loginButton has been pressed
+        [userTextfield resignFirstResponder];
+        } else {
+            userNotice.backgroundColor = [UIColor redColor];
+            userNotice.textColor = [UIColor blackColor];
+            //Change .text to error message
+            userNotice.text = @"Username cannot be empty";
+            //Hide keyboard after loginButton has been pressed
+            [userTextfield resignFirstResponder];
         }
     } else if (buttonClicked.tag == DATE_BUTTON) { //dateButton
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked date" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -74,14 +98,14 @@
         [self.view addSubview:userLabel];
     }
     
-    //Create text field to enter username
-    UITextField *userText = [[UITextField alloc] initWithFrame:CGRectMake(100.0f,15.0f,215.0f,35.0f)];
-    if (userText != nil) {
-        userText.borderStyle = UITextBorderStyleRoundedRect;
-        //userText.backgroundColor = [UIColor darkGrayColor];
-        //userText.textColor = [UIColor whiteColor];
+    //Create text field to enter username. Declared in .h
+    userTextfield = [[UITextField alloc] initWithFrame:CGRectMake(100.0f,15.0f,215.0f,35.0f)];
+    if (userTextfield != nil) {
+        userTextfield.borderStyle = UITextBorderStyleRoundedRect;
+        //userTextfield.backgroundColor = [UIColor darkGrayColor];
+        //userTextfield.textColor = [UIColor whiteColor];
         //Add Subview to add text field in the view
-        [self.view addSubview:userText];
+        [self.view addSubview:userTextfield];
     }
     
     //Create login button
@@ -98,8 +122,8 @@
         [self.view addSubview:loginButton];
     }
     
-    //Create notice UILable that says "Please Enter Username"
-    UILabel *userNotice = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,120.0f,320.0f,35.0f)];
+    //Create notice UILable that says "Please Enter Username", changed with press of loginButton. Declared in .h
+    userNotice = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,120.0f,320.0f,35.0f)];
     if (userNotice != nil) {
         userNotice.backgroundColor = [UIColor darkGrayColor];
         userNotice.text = @"Please Enter Username";
@@ -155,7 +179,7 @@ Lastname" in a label when the info button is clicked.*/
         [self.view addSubview:infoButton];
     }
     
-    //Create empty UILabel to later display "created by" text
+    //Create empty UILabel to later display "created by" text. Declared in .h
     emptyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,375.0f,320.0f,60.0f)];
     if (emptyLabel != nil) {
         emptyLabel.backgroundColor = [UIColor darkGrayColor];
