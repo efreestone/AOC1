@@ -30,19 +30,21 @@
 -(void)onClick:(UIButton*)buttonClicked {
     if (buttonClicked.tag == BUTTON_ZERO) { //loginButton
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked login" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        //if (alertView != nil) {
+        if (alertView != nil) {
             [alertView show];
-        //}
+        }
     } else if (buttonClicked.tag == BUTTON_ONE) { //dateButton
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked date" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         if (alertView != nil) {
             [alertView show];
         }
     } else if (buttonClicked.tag == BUTTON_TWO) { //infoButton
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked info" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked info" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         if (alertView != nil) {
             [alertView show];
-        }
+        }*/
+        emptyLabel.text = @"This application was created by: Elijah Freestone";
+        [self.view addSubview:emptyLabel];
     } else {
         NSLog(@"No button tag number. I think you broke it!");
     }
@@ -61,7 +63,7 @@
     //DONE2. Create a UITextField to the right of the username label.
     //DONE3. Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
     //DONE4. Create another UILabel beneath with the default text "Please Enter Username".
-    //5. Add a target to the UIButton to call a function called onClick when the user presses the Login button.
+    //DONE5. Add a target to the UIButton to call a function called onClick when the user presses the Login button.
     //6. If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
     //7. Hint: NSString has a property called length that tells you how many characters are in the string.
     
@@ -117,7 +119,7 @@ NSDate object.*/
     
     //DONE1. Create a UIButton using the rounded rectangle type. Give this button any color you wish.
     //DONE2. Add the text "Show Date" to the button
-    //3. Add an action to the button that when clicked, it will call the same onClick handler you already defined. Make sure to add a tag to the date button so you know which one was pressed.
+    //DONE3. Add an action to the button that when clicked, it will call the same onClick handler you already defined. Make sure to add a tag to the date button so you know which one was pressed.
     //4. Display a UIAlertView with the current date and time displayed in the format seen in the dateAlert graphic in the assets section of this project assignment. You can either format the date and time manually or use the date and time styles. You must use an NSDate object to gather the date and time information.
     
     
@@ -141,8 +143,8 @@ Lastname" in a label when the info button is clicked.*/
     
     //DONE1. Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
     //DONE2. Create a UILabel beneath it that contains no initial text.
-    //3. Hook up an action to the info button to have it call the onClick handler you created earlier.
-    //4. When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
+    //DONE3. Hook up an action to the info button to have it call the onClick handler you created earlier.
+    //DONE4. When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     
     
     //Create info button to display "created by" text
@@ -158,14 +160,14 @@ Lastname" in a label when the info button is clicked.*/
     }
     
     //Create empty UILabel to later display "created by" text
-    UILabel *emptyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,370.0f,320.0f,35.0f)];
+    emptyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,375.0f,320.0f,60.0f)];
     if (emptyLabel != nil) {
-        //emptyLabel.backgroundColor = [UIColor darkGrayColor];
-        emptyLabel.text = @"Test";
+        emptyLabel.backgroundColor = [UIColor darkGrayColor];
         emptyLabel.textAlignment = NSTextAlignmentCenter;
-        //emptyLabel.textColor = [UIColor whiteColor];
+        emptyLabel.textColor = [UIColor whiteColor];
+        emptyLabel.numberOfLines = 2;
         //Add Subview to add label in the view
-        [self.view addSubview:emptyLabel];
+        //[self.view addSubview:emptyLabel];
     }
     
     /* End Instructions: DELETE FROM FINAL!! */

@@ -15,10 +15,14 @@
 
 @interface ViewController : UIViewController
 {
+    
+    UILabel *emptyLabel;
 
 }
 
 //Declare onClick function
 -(void)onClick:(UIButton*)buttonClicked;
+
+
 
 @end
