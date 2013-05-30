@@ -29,13 +29,13 @@
 //Create onClick function to be called by each button based on tag number defined above
 -(void)onClick:(UIButton*)buttonClicked {
     if (buttonClicked.tag == LOGIN_BUTTON) { //loginButton
-        NSLog(@"Login button pressed");
-        //Save username text input to variable userInput. To be appended to another string in if statement
+        //Save username text input to variable userInput to check length and append to another string later. 
         NSString *userInput = [userTextfield text];
+        //Check to make sure a username was entered with .length property
         if (userInput.length > 0) {
-        //Create NSString to be displayed as userNotice.text with userInput appended
-        NSString *userInfo = [[NSString alloc] initWithFormat:@"User: %@ has been logged in", userInput];
-        //Add second line if username is longer than 9 characters. 10 works in most cases but adds ... if wider characters (like W) are used
+            //Create NSString to be displayed as userNotice.text with userInput appended
+            NSString *userInfo = [[NSString alloc] initWithFormat:@"User: %@ has been logged in", userInput];
+            //Add second line if username is longer than 9 characters. 10 works in most cases but adds ... if wider characters (like W) are used
             if (userInfo.length > 34) {
                 userNotice.frame = CGRectMake(0.0f,120.0f,320.0f,60.0f);
                 userNotice.numberOfLines = 2;
@@ -43,17 +43,19 @@
                 userNotice.frame = CGRectMake(0.0f,120.0f,320.0f,35.0f);
                 userNotice.numberOfLines = 1;
             }
-        userNotice.backgroundColor = [UIColor blueColor];
-        userNotice.textColor = [UIColor whiteColor];
-        //Apply userInfo string to .text
-        userNotice.text = userInfo;
-        //Hide keyboard after loginButton has been pressed
-        [userTextfield resignFirstResponder];
-        } else {
+            userNotice.backgroundColor = [UIColor blueColor];
+            userNotice.textColor = [UIColor whiteColor];
+            //Apply userInfo string to .text
+            userNotice.text = userInfo;
+            //Hide keyboard after loginButton has been pressed
+            [userTextfield resignFirstResponder];
+        } else { //Display error message if no username was entered
             userNotice.backgroundColor = [UIColor redColor];
             userNotice.textColor = [UIColor blackColor];
             //Change .text to error message
             userNotice.text = @"Username cannot be empty";
+            //Override element height if third "if" statement was hit
+            userNotice.frame = CGRectMake(0.0f,120.0f,320.0f,35.0f);
             //Hide keyboard after loginButton has been pressed
             [userTextfield resignFirstResponder];
         }
@@ -64,6 +66,7 @@
         }
     } else if (buttonClicked.tag == INFO_BUTTON) { //infoButton
         emptyLabel.text = @"This application was created by: Elijah Freestone";
+        //Add Subview to add label in the view
         [self.view addSubview:emptyLabel];
     } else {
         NSLog(@"Whoops! No button tag number. I think you broke it!");
@@ -84,8 +87,8 @@
     //DONE3. Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
     //DONE4. Create another UILabel beneath with the default text "Please Enter Username".
     //DONE5. Add a target to the UIButton to call a function called onClick when the user presses the Login button.
-    //6. If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
-    //7. Hint: NSString has a property called length that tells you how many characters are in the string.
+    //DONE6. If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
+    //DONE7. Hint: NSString has a property called length that tells you how many characters are in the string.
     
     
     //Create UILabel for username
