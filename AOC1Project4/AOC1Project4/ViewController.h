@@ -14,5 +14,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+
+}
+
+//Declare onClick function
+-(void)onClick:(UIButton*)buttonClicked;
 
 @end

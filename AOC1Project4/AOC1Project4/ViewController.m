@@ -13,6 +13,13 @@
 
 #import "ViewController.h"
 
+//define loginButton tag as 0
+#define BUTTON_ZERO 0
+//define dateButton tag as 1
+#define BUTTON_ONE 1
+//define infoButton tag as 2
+#define BUTTON_TWO 2
+
 @interface ViewController ()
 
 @end
@@ -20,16 +27,30 @@
 @implementation ViewController
 
 //Create onClick function and test with UIAlert
--(void)onClick {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Popup" message:@"it works!" delegate:nil cancelButtonTitle:@"bacon" otherButtonTitles:nil];
-    if (alertView != nil) {
-        [alertView show];
+-(void)onClick:(UIButton*)buttonClicked {
+    if (buttonClicked.tag == BUTTON_ZERO) { //loginButton
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked login" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //if (alertView != nil) {
+            [alertView show];
+        //}
+    } else if (buttonClicked.tag == BUTTON_ONE) { //dateButton
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked date" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        if (alertView != nil) {
+            [alertView show];
+        }
+    } else if (buttonClicked.tag == BUTTON_TWO) { //infoButton
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked info" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        if (alertView != nil) {
+            [alertView show];
+        }
+    } else {
+        NSLog(@"No button tag number. I think you broke it!");
     }
 }
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     //self.view.backgroundColor = [UIColor colorWithRed:0.812 green:0.965 blue:0.976 alpha:1]; /*#cff6f9*/
     /* Instructions: DELETE FROM FINAL!! */
     
@@ -70,9 +91,11 @@
     if (loginButton != nil) {
         loginButton.frame = CGRectMake(110.0f, 60.0f, 100.0f, 50.0f);
         loginButton.tintColor = [UIColor greenColor];
+        //Give button tag number
+        loginButton.tag = BUTTON_ZERO;
         [loginButton setTitle:@"Login" forState:UIControlStateNormal];
         [loginButton setTitle:@"Pushed" forState:UIControlStateHighlighted];
-        [loginButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         //Add Subview to add button in the view
         [self.view addSubview:loginButton];
     }
@@ -103,8 +126,11 @@ NSDate object.*/
     if (dateButton != nil) {
         dateButton.frame = CGRectMake(110.0f, 225.0f, 100.0f, 50.0f);
         dateButton.tintColor = [UIColor yellowColor];
+        //Give button tag number
+        dateButton.tag = BUTTON_ONE;
         [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
         [dateButton setTitle:@"Pushed" forState:UIControlStateHighlighted];
+        [dateButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         //Add Subview to add button in the view
         [self.view addSubview:dateButton];
     }
@@ -124,6 +150,9 @@ Lastname" in a label when the info button is clicked.*/
     if (infoButton != nil) {
         //infoButton.backgroundColor = [UIColor redColor];
         infoButton.frame = CGRectMake(145.0f, 345.0f, 30.0f, 30.0f);
+        //Give button tag number
+        infoButton.tag = BUTTON_TWO;
+        [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         //Add Subview to add button in the view
         [self.view addSubview:infoButton];
     }
