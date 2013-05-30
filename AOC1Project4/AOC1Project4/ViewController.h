@@ -15,6 +15,12 @@
 
 @interface ViewController : UIViewController
 {
+    //Declare userText to grab username input
+    UITextField *userTextfield;
+    
+    //Declare userNotice to display message based on username input
+    UILabel *userNotice;
+    
     //Declare emptyLabel to display "created by"
     UILabel *emptyLabel;
 }
