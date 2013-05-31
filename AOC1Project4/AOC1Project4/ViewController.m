@@ -60,9 +60,18 @@
             [userTextfield resignFirstResponder];
         }
     } else if (buttonClicked.tag == DATE_BUTTON) { //dateButton
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message" message:@"You clicked date" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        if (alertView != nil) {
-            [alertView show];
+        //Get date
+        NSDate *currentDate = [NSDate date];
+        //Format date to prep for display
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        if (dateFormatter != nil) {
+            [dateFormatter setDateFormat:@"MMMM dd, yyyy hh:mm:ss a zzzz"];
+            NSString *formattedDate = [dateFormatter stringFromDate:currentDate];
+            //Create UIAlertView variable and inject NSString of current date
+            UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Date & Time" message:formattedDate delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            if (dateAlert != nil) {
+                [dateAlert show];
+            }
         }
     } else if (buttonClicked.tag == INFO_BUTTON) { //infoButton
         emptyLabel.text = @"This application was created by: Elijah Freestone";
@@ -75,8 +84,8 @@
 
 - (void)viewDidLoad
 {
+    //Set background color to light gray to show highlight of info button
     self.view.backgroundColor = [UIColor lightGrayColor];
-    //self.view.backgroundColor = [UIColor colorWithRed:0.812 green:0.965 blue:0.976 alpha:1]; /*#cff6f9*/
     /* Instructions: DELETE FROM FINAL!! */
     
 /* Section 1 Instructions: DELETE FROM FINAL!! */
@@ -94,9 +103,10 @@
     //Create UILabel for username
     UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f,15.0f,90.0f,35.0f)];
     if (userLabel != nil) {
+        userLabel.backgroundColor = [UIColor lightGrayColor];
         userLabel.text = @"Username: ";
         userLabel.textAlignment = NSTextAlignmentLeft;
-        userLabel.textColor = [UIColor darkGrayColor];
+        userLabel.textColor = [UIColor blackColor];
         //Add Subview to add label in the view
         [self.view addSubview:userLabel];
     }
@@ -189,8 +199,7 @@ Lastname" in a label when the info button is clicked.*/
         emptyLabel.textAlignment = NSTextAlignmentCenter;
         emptyLabel.textColor = [UIColor whiteColor];
         emptyLabel.numberOfLines = 2;
-        //Add Subview to add label in the view
-        //[self.view addSubview:emptyLabel];
+        //addSubview is called inside onClick
     }
     
     /* End Instructions: DELETE FROM FINAL!! */
