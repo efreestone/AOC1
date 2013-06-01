@@ -74,7 +74,7 @@
             }
         }
     } else if (buttonClicked.tag == INFO_BUTTON) { //infoButton
-        emptyLabel.text = @"This application was created by: Elijah Freestone";
+        emptyLabel.text = @"This application was created by:\n Elijah Freestone";
         //Add Subview to add label in the view
         [self.view addSubview:emptyLabel];
     } else {
@@ -86,7 +86,6 @@
 {
     //Set background color to light gray to show highlight of info button
     self.view.backgroundColor = [UIColor lightGrayColor];
-    /* Instructions: DELETE FROM FINAL!! */
     
 /* Section 1: Login */
 
